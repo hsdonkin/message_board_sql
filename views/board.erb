@@ -1,15 +1,14 @@
-<form class="" action="/add_message" method="post">
+<form class="" action="/<%= @board_name %>/post_message" method="post">
   <label for="">Username</label>
   <input type="text" name="user_name" value="">
   <label for="">Topic</label>
   <input type="text" name="topic" value="">
   <label for="">Message</label>
   <input type="text" name="content" value="">
-  <button type="submit" name="button">Post</button>
+  <button type="submit">Post</button>
 </form>
 
 <% @posts.each do |post| %>
-<%binding.pry%>
     <div class="message">
       <h3><%= post["user_name"] %></h3>
       <p><%= post["time"] %></p>
